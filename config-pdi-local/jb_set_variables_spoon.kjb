@@ -13,17 +13,17 @@
   <parameters>
     <parameter>
       <name>P_BUS_AREA_NAME</name>
-      <default_value/>
+      <default_value>product-instrument</default_value>
       <description/>
     </parameter>
     <parameter>
       <name>P_JOB_NAME</name>
-      <default_value/>
+      <default_value>jb_extraction</default_value>
       <description/>
     </parameter>
     <parameter>
       <name>P_PROJECT_NAME</name>
-      <default_value/>
+      <default_value>acquisition</default_value>
       <description/>
     </parameter>
   </parameters>
@@ -553,6 +553,16 @@
       <xloc>544</xloc>
       <yloc>64</yloc>
     </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1024</xloc>
+      <yloc>64</yloc>
+    </entry>
   </entries>
   <hops>
     <hop>
@@ -625,6 +635,15 @@
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>fe-job</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
   </hops>
