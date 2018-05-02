@@ -26,6 +26,11 @@
       <default_value>acquisition</default_value>
       <description/>
     </parameter>
+    <parameter>
+      <name>P_SCALE_UP</name>
+      <default_value>false</default_value>
+      <description/>
+    </parameter>
   </parameters>
   <connection>
     <name>pdi_logging</name>
@@ -475,7 +480,7 @@
       <description/>
       <type>SET_VARIABLES</type>
       <replacevars>Y</replacevars>
-      <filename>${CONFIG_DIR}/properties/${P_PROJECT_NAME}_${P_JOB_NAME}.properties</filename>
+      <filename>${CONFIG_DIR}/properties/${P_JOB_NAME}.properties</filename>
       <file_variable_type>JVM</file_variable_type>
       <fields>
       </fields>
@@ -486,7 +491,7 @@
       <yloc>192</yloc>
     </entry>
     <entry>
-      <name>sv-V_JOB_NAME</name>
+      <name>sv-V_JOB_NAME-V_SCALE_UP</name>
       <description/>
       <type>SET_VARIABLES</type>
       <replacevars>Y</replacevars>
@@ -496,6 +501,11 @@
         <field>
           <variable_name>V_JOB_NAME</variable_name>
           <variable_value>${P_JOB_NAME}</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>V_SCALE_UP</variable_name>
+          <variable_value>${P_SCALE_UP}</variable_value>
           <variable_type>JVM</variable_type>
         </field>
       </fields>
@@ -524,7 +534,7 @@
       <name>fe-job</name>
       <description/>
       <type>FILE_EXISTS</type>
-      <filename>${CONFIG_DIR}/properties/${P_PROJECT_NAME}_${P_JOB_NAME}.properties</filename>
+      <filename>${CONFIG_DIR}/properties/${P_JOB_NAME}.properties</filename>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -594,7 +604,7 @@
     </hop>
     <hop>
       <from>fe-business_area</from>
-      <to>sv-V_JOB_NAME</to>
+      <to>sv-V_JOB_NAME-V_SCALE_UP</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -602,7 +612,7 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>sv-V_JOB_NAME</from>
+      <from>sv-V_JOB_NAME-V_SCALE_UP</from>
       <to>fe-job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -652,11 +662,12 @@
       <note>Example values for running
 P_PROJECT_NAME=acquisition
 P_BUS_AREA_NAME=product-instrument
-P_JOB_NAME=jb_extraction</note>
+P_JOB_NAME=jb_extraction
+P_SCALE_UP=false</note>
       <xloc>64</xloc>
       <yloc>128</yloc>
       <width>230</width>
-      <heigth>74</heigth>
+      <heigth>90</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
