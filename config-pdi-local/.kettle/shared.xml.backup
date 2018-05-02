@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sharedobjects>
   <connection>
+    <name>acquisition</name>
+    <server>${ACQUISITION.HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${ACQUISITION.DB}</database>
+    <port>${ACQUISITION.PORT}</port>
+    <username>${ACQUISITION.USER}</username>
+    <password>${ACQUISITION.PASS}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${ACQUISITION.PORT}</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+
+  <connection>
+    <name>core</name>
+    <server>${CORE.HOST}</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>${CORE.DB}</database>
+    <port>${CORE.PORT}</port>
+    <username>${CORE.USER}</username>
+    <password>${CORE.PASS}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${CORE.PORT}</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+
+  <connection>
     <name>pdi_logging</name>
     <server>${PDI_LOGGING.HOST}</server>
     <type>POSTGRESQL</type>
@@ -26,14 +76,14 @@
   </connection>
 
   <connection>
-    <name>dwh</name>
-    <server>${DWH.HOST}</server>
+    <name>service</name>
+    <server>${SERVICE.HOST}</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>${DWH.DB}</database>
-    <port>${DWH.PORT}</port>
-    <username>${DWH.USER}</username>
-    <password>${DWH.PASS}</password>
+    <database>${SERVICE.DB}</database>
+    <port>${SERVICE.PORT}</port>
+    <username>${SERVICE.USER}</username>
+    <password>${SERVICE.PASS}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -41,7 +91,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${DWH.PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${SERVICE.PORT}</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
