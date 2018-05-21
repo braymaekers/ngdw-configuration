@@ -108,7 +108,7 @@
     <database>${PDI_CONTROL.DB}</database>
     <port>${PDI_CONTROL.PORT}</port>
     <username>${PDI_CONTROL.USER}</username>
-    <password>${PDI_LOGGING.PASS}</password>
+    <password>${PDI_CONTROL.PASS}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
