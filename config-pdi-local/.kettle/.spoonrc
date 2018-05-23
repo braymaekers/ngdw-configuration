@@ -1,5 +1,5 @@
 #Kettle Properties file
-#Wed May 23 11:05:27 WEST 2018
+#Wed May 23 11:07:37 WEST 2018
 AskAboutReplacingDatabases=N
 AutoCollapseCoreObjectsTree=Y
 AutoSave=N
@@ -777,7 +777,7 @@ SizeX56=130
 SizeX57=861
 SizeX58=685
 SizeX59=2011
-SizeX5=632
+SizeX5=635
 SizeX60=501
 SizeX61=570
 SizeX62=2476
