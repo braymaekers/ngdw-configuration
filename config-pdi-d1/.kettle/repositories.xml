@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <repositories>
-  <repository>    
-    <id>PentahoEnterpriseRepository</id>
+  <repository>    <id>PentahoEnterpriseRepository</id>
     <name>Central-Repo</name>
     <description>Pentaho repository on Cluster</description>
     <is_default>true</is_default>
-    <repository_location_url>http://loadbalancer/pentaho</repository_location_url>
+    <repository_location_url>http://di-server/pentaho</repository_location_url>
     <version_comment_mandatory>N</version_comment_mandatory>
-  </repository>  
-</repositories>
+  </repository>  </repositories>
