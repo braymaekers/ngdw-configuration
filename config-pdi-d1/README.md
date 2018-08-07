@@ -16,5 +16,4 @@ From console:
 ./kitchen.sh -rep=Central-Repo -user=admin -pass=password -dir=/public/hkex/etl-framework/execution -job=jb_kitchen_executor -param:P_JOB_NAME=jb_load_dim_product -param:P_PROJECT_NAME=service -level=Minimal
 ```
 
-
 The important detail is that _kitchen.sh_ needs to have the correct path to the folder that contains the used .kettle.
